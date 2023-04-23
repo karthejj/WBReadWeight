@@ -25,13 +25,14 @@ public class MyApplicationRunner implements ApplicationRunner {
 		// TODO Auto-generated method stub
 		
 		try {
-			SerialPort comPort = SerialPort.getCommPorts()[2];
-			System.out.println(comPort.getDescriptivePortName());
-			System.out.println(comPort.getPortDescription());
-			System.out.println(comPort.getSystemPortName());
+//			SerialPort comPort = SerialPort.getCommPorts()[2];
+//			System.out.println(comPort.getDescriptivePortName());
+//			System.out.println(comPort.getPortDescription());
+//			System.out.println(comPort.getSystemPortName());
 //			System.out.println(comPort.get);
-			comPort.openPort();
-			comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
+			
+//			comPort.openPort();
+//			comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
 //			InputStream in = comPort.getInputStream();
 			ByteArrayInputStream in = new ByteArrayInputStream("US,NT,-113.0254kg\nUS,NT,-113.0254kg\nUS,NT,-113.0254kg\n".getBytes());
 			try
@@ -66,7 +67,7 @@ public class MyApplicationRunner implements ApplicationRunner {
 //             System.out.println(rwDTO.getCreatedDate());
              in.close();
 			} catch (Exception e) { e.printStackTrace(); }
-			comPort.closePort();
+//			comPort.closePort();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
